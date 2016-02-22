@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skin.UserSmallSkin" width="240" height="60" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" strokeColor="0x797A78" fillColor="0x159B94"/>
+	<e:Image height="48" width="48" verticalCenter="0" left="12"/>
+	<e:Label text="用户名字" x="126" y="12" size="16"/>
+	<e:Label y="35" text="地点" x="125" size="16"/>
+</e:Skin>

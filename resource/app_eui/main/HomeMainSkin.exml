@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<e:Skin class="skins.HomeMainSkin" xmlns:e="http://ns.egret.com/eui" xmlns:ns1="*" xmlns:Voucher="Voucher.*" xmlns:w="http://ns.egret.com/wing" xmlns:User="User.*" width="480" height="800">
+	<e:Scroller id="voucherScroll" left="0" right="0" top="60" bottom="60">
+		<e:Group>
+			<Voucher:Single id="firstVoucher" x="138" y="241" skinName="skins.VoucherSingleSkin"/>
+			<Voucher:Single y="251" skinName="skins.VoucherSingleSkin" x="148"/>
+			<Voucher:Single y="261" skinName="skins.VoucherSingleSkin" x="158"/>
+			<Voucher:Single y="271" skinName="skins.VoucherSingleSkin" x="168"/>
+			<Voucher:Single y="281" skinName="skins.VoucherSingleSkin" x="178"/>
+			<Voucher:Single y="291" skinName="skins.VoucherSingleSkin" x="188"/>
+			<Voucher:Single y="301" skinName="skins.VoucherSingleSkin" x="198"/>
+			<Voucher:Single y="311" skinName="skins.VoucherSingleSkin" x="208"/>
+			<e:layout>
+				<e:TileLayout requestedRowCount="2" requestedColumnCount="2" paddingTop="10" paddingBottom="10" horizontalGap="10" verticalGap="10" rowHeight="220" columnWidth="220" paddingLeft="15"/>
+			</e:layout>
+		</e:Group>
+	</e:Scroller>
+	<e:Button label="添加金券" x="290" bottom="5" width="148"/>
+	<User:Small skinName="skin.UserSmallSkin" width="250" left="20" bottom="0"/>
+</e:Skin>

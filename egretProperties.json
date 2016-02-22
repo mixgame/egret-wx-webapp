@@ -1,0 +1,33 @@
+{
+  "native": {
+    "path_ignore": []
+  },
+  "publish": {
+    "web": 0,
+    "native": 1,
+    "path": "bin-release"
+  },
+  "egret_version": "3.0.2",
+  "modules": [
+    {
+      "name": "egret"
+    },
+    {
+      "name": "eui"
+    },
+    {
+      "name": "res"
+    },
+    {
+      "name": "tween"
+    },
+    {
+      "name": "weixinapi",
+      "path": "D:/egretApp/module/weixinapi/libsrc"
+    },
+    {
+      "name": "leanCloud",
+      "path": "D:/egretApp/module/leanCloud"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    "resource/app_eui/voucher/VoucherSingleSkin.exml",
+    "resource/app_eui/user/UserSmallSkin.exml",
+    "resource/app_eui/main/HomeMainSkin.exml",
+    "resource/app_eui/main/NoticeMainSkin.exml",
+    "resource/app_eui/main/PayShowSkin.exml",
+    "resource/app_eui/main/UserMainSkin.exml",
+    "resource/eui_skins/ButtonSkin.exml",
+    "resource/eui_skins/HScrollBarSkin.exml",
+    "resource/eui_skins/ScrollerSkin.exml",
+    "resource/eui_skins/VScrollBarSkin.exml"
+  ],
+  "skins": {
+    "eui.Button": "resource/eui_skins/ButtonSkin.exml",
+    "eui.HScrollBar": "resource/eui_skins/HScrollBarSkin.exml",
+    "eui.Scroller": "resource/eui_skins/ScrollerSkin.exml",
+    "eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml"
+  }
+}

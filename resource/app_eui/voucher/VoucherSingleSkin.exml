@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<e:Skin class="skins.VoucherSingleSkin" width="220" height="220" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect left="0" right="0" top="0" bottom="0" fillColor="0x339966" locked="true"/>
+	<e:Label text="商品名称一长串文字" x="32" y="46" height="97" width="156" size="22"/>
+	<e:Label text="价格：33" x="78" y="175" size="16"/>
+</e:Skin>
