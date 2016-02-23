@@ -23,11 +23,11 @@
     },
     {
       "name": "weixinapi",
-      "path": "D:/egretApp/module/weixinapi/libsrc"
+      "path": "../egret-modules-list/weixinapi/libsrc"
     },
     {
       "name": "leanCloud",
-      "path": "D:/egretApp/module/leanCloud"
+      "path": "../egret-modules-list/leanCloud/libsrc"
     }
   ]
 }
