@@ -23,11 +23,11 @@
     },
     {
       "name": "weixinapi",
-      "path": "../egret-modules-list/weixinapi/libsrc"
+      "path": "../../egret-modules-list/weixinapi/libsrc"
     },
     {
       "name": "leanCloud",
-      "path": "../egret-modules-list/leanCloud/libsrc"
+      "path": "../../egret-modules-list/leanCloud/libsrc"
     }
   ]
 }

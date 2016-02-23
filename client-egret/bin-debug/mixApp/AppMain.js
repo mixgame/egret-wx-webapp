@@ -1,15 +1,14 @@
-module MixApp {
+var MixApp;
+(function (MixApp) {
     /**
      * web app的主控制类
-     */ 
-    export class AppMain {
-        static Main:Main;           //总ui层
-        static Home:HomeMain;       //app主要显示层
-        static Pay:PayMain;         //支付界面 覆盖在home上面
-        static Loading:LoadingUI;   //缓冲读取界面 覆盖在pay上面
-        static Notice:NoticeMain;   //全局通知层
-        
-        static initLogin(){
+     */
+    var AppMain = (function () {
+        function AppMain() {
+        }
+        var d = __define,c=AppMain,p=c.prototype;
+        AppMain.initLogin = function () {
+            console.log("code::", MixApp.UserConfig.code);
             AppMain.Home = new HomeMain();
             AppMain.Home.width = AppMain.Main.width;
             AppMain.Home.height = AppMain.Main.height;
@@ -20,32 +19,31 @@ module MixApp {
             AppMain.Notice.width = AppMain.Main.width;
             AppMain.Notice.height = AppMain.Main.height;
             AppMain.Main.removeChildren();
-            
             console.log("加入HomeMain页面");
             AppMain.Main.addChild(AppMain.Home);
-        }
-        
-        static openPay(){
+        };
+        AppMain.openPay = function () {
             AppMain.Home.touchChildren = false;
             AppMain.Main.removeChild(AppMain.Home);
             AppMain.Main.addChild(AppMain.Pay);
-        }
-        
-        static closePay(){
+        };
+        AppMain.closePay = function () {
             AppMain.Main.removeChild(AppMain.Pay);
             AppMain.Main.addChild(AppMain.Home);
             AppMain.Home.touchChildren = true;
-        }
-        
-        static openNotice(){
+        };
+        AppMain.openNotice = function () {
             AppMain.Home.touchChildren = false;
             AppMain.Pay.touchChildren = false;
             AppMain.Main.addChild(AppMain.Notice);
-        }
-        static closeNotice(){
+        };
+        AppMain.closeNotice = function () {
             AppMain.Main.removeChild(AppMain.Notice);
             AppMain.Home.touchChildren = true;
             AppMain.Pay.touchChildren = true;
-        }
-    }
-}
+        };
+        return AppMain;
+    })();
+    MixApp.AppMain = AppMain;
+    egret.registerClass(AppMain,'MixApp.AppMain');
+})(MixApp || (MixApp = {}));

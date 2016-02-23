@@ -16,5 +16,5 @@
 		</e:Group>
 	</e:Scroller>
 	<e:Button label="添加金券" x="290" bottom="5" width="148"/>
-	<User:Small skinName="skin.UserSmallSkin" width="250" left="20" bottom="0"/>
+	<User:Small skinName="skin.UserSmallSkin" width="250" left="15" top="0"/>
 </e:Skin>

@@ -8,7 +8,7 @@ module MixApp {
         static AppVer:string = "0.0.1";
         
         //本地测试 跳过wx认证
-        static LocalTest:boolean = true;
+        static LocalTest:boolean = false;
     }
 	/** 
 	 * wx相关的 的基本配置

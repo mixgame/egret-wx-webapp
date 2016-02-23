@@ -11,7 +11,7 @@ var MixApp;
         // 不兼容时递加 . 兼容并增加功能时递加 . bug修复递加
         WebAppConfig.AppVer = "0.0.1";
         //本地测试 跳过wx认证
-        WebAppConfig.LocalTest = true;
+        WebAppConfig.LocalTest = false;
         return WebAppConfig;
     })();
     MixApp.WebAppConfig = WebAppConfig;
