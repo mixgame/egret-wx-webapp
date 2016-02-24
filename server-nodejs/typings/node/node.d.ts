@@ -537,7 +537,7 @@ declare module "http" {
         end(str: string, encoding?: string, cb?: Function): void;
         end(data?: any, encoding?: string): void;
     }
-    export interface IncomingMessage extends events.EventEmitter, stream.Readable {
+    export interface IncomingMessage extends NodeJS.EventEmitter, stream.Readable {
         httpVersion: string;
         headers: any;
         rawHeaders: string[];

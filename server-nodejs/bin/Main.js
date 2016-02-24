@@ -1,4 +1,9 @@
 "use strict";
 var mixServer = require("./mixServer");
-var serverOpen = new mixServer.Open();
-var serverClose = new mixServer.Close();
+var router = require("./router");
+var requestHandlers = require("./requestHandlers");
+var handle = {};
+handle["/"] = requestHandlers.start;
+handle["/start"] = requestHandlers.start;
+handle['/upload'] = requestHandlers.upload;
+mixServer.OpenServer(router.Route, handle);

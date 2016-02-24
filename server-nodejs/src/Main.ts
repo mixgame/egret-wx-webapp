@@ -1,4 +1,10 @@
 import mixServer = require("./mixServer");
+import router = require("./router");
+import requestHandlers = require("./requestHandlers");
 
-var serverOpen = new mixServer.Open();
-var serverClose = new mixServer.Close();
+var handle = {};
+handle["/"] = requestHandlers.start;
+handle["/start"] = requestHandlers.start;
+handle['/upload'] = requestHandlers.upload;
+
+mixServer.OpenServer(router.Route,handle);

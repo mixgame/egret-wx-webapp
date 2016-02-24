@@ -1,19 +1,21 @@
 "use strict";
-var Open = (function () {
-    function Open() {
-        console.log("这里哈哈");
-        //http.createServer(this.open).listen(8888);
+/// <reference path="../typings/node/node.d.ts" />
+var http = require('http');
+var url = require('url');
+function OpenServer(route, handle) {
+    function createServerComplete(request, response) {
+        var postData = "";
+        var pathname = url.parse(request.url).pathname;
+        console.log("request for " + pathname + " received....");
+        request.setEncoding("utf8");
+        request.addListener("data", function (postDataChunk) {
+            postData += postDataChunk;
+            console.log("传入的数据post : " + postDataChunk);
+        });
+        request.addListener("end", function () {
+            route(handle, pathname, response, postData);
+        });
     }
-    Open.prototype.open = function () {
-        console.log("open");
-    };
-    return Open;
-}());
-exports.Open = Open;
-var Close = (function () {
-    function Close() {
-        console.log("关闭了");
-    }
-    return Close;
-}());
-exports.Close = Close;
+    http.createServer(createServerComplete).listen(8888);
+}
+exports.OpenServer = OpenServer;
