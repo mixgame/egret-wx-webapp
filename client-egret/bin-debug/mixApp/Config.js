@@ -10,8 +10,8 @@ var MixApp;
         WebAppConfig.AppName = "mix的测试app";
         // 不兼容时递加 . 兼容并增加功能时递加 . bug修复递加
         WebAppConfig.AppVer = "0.0.1";
-        //本地测试 跳过wx认证
-        WebAppConfig.LocalTest = false;
+        //是否做网页登录
+        WebAppConfig.isWebLogin = false;
         return WebAppConfig;
     })();
     MixApp.WebAppConfig = WebAppConfig;
@@ -61,6 +61,9 @@ var MixApp;
         function AvConfig() {
         }
         var d = __define,c=AvConfig,p=c.prototype;
+        AvConfig.IsOpenPro = false; //是否开启生产环境 即正式版
+        AvConfig.AppId = "nvgLctz1xnvxqF7kNXJ8PVxA-gzGzoHsz";
+        AvConfig.AppKey = "o9KgsC5CUhbLSyfNiXLkr96B";
         return AvConfig;
     })();
     MixApp.AvConfig = AvConfig;

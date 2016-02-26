@@ -1,12 +1,13 @@
-/// <reference path="../typings/express/express.d.ts" />
+///<reference path="../server-node/typings/node/node.d.ts"/>
+///<reference path="../server-node/typings/express/express.d.ts"/>
 var express = require('express');
 var app = express();
-var admin = express();
-admin.get('/', function (req, res, next) {
-    console.log(admin.mountpath);
-    res.send('admin homepage');
+app.use(express.static('public'));
+var wx = require('./api/wx');
+app.use('/api/wx', wx);
+app.get('/', function (req, res) {
+    res.send('hello world!!!  nono');
 });
-app.use('/admin', admin);
-app.use(express.static(__dirname + "/public"));
-console.log("dir:" + __dirname);
-app.listen(3000);
+app.listen(80, function () {
+    console.log("server is open!");
+});

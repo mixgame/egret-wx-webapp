@@ -27,8 +27,9 @@ var MixApp;
             return "";
         };
         p.checkUrl = function () {
-            if (MixApp.WebAppConfig.LocalTest) {
-                MixApp.AppMain.initLogin();
+            if (!MixApp.WebAppConfig.isWebLogin) {
+                this.getWxJsSdkSign();
+                this.loadAppRes();
                 return;
             }
             //检查url中是否带有state和openid
@@ -37,7 +38,7 @@ var MixApp;
             var index = url.indexOf("?");
             //有传递的参数code
             if (this.getUrlFieldWord("code") !== "") {
-                console.log("已经认证加载并初始化js-sdk");
+                console.log("已经认证加载 开始初始化js-sdk");
                 MixApp.UserConfig.code = this.getUrlFieldWord("code");
                 this.getWxJsSdkSign();
                 this.loadAppRes();
@@ -68,21 +69,24 @@ var MixApp;
             window.location.href = url;
         };
         p.getWxJsSdkSign = function () {
+            AV.initialize(MixApp.AvConfig.AppId, MixApp.AvConfig.AppKey);
+            AV.setProduction(MixApp.AvConfig.IsOpenPro);
             console.log("微信js-sdk开始初始化");
-            var jsonUrl = MixApp.WxConfig.JsSdkSignUrl + "?";
-            jsonUrl += "url=" + encodeURIComponent(window.location.href);
-            //1 请求自己的php服务器获取签名
-            var request = new egret.HttpRequest();
-            request.responseType = egret.HttpResponseType.TEXT;
-            request.open(jsonUrl, egret.HttpMethod.GET);
-            request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            request.send();
-            request.addEventListener(egret.Event.COMPLETE, this.onGetJsSdkSignComplete, this);
+            var url = encodeURIComponent(window.location.href);
+            //1 请求自己的服务器获取签名
+            var self = this;
+            AV.Cloud.run('weixin-get-jsSdkSign', { url: url }, {
+                success: function (data) {
+                    self.onGetJsSdkSignComplete(data);
+                },
+                error: function (data) {
+                    console.error("微信jssdk 签名获取失败", data);
+                }
+            });
         };
-        p.onGetJsSdkSignComplete = function (event) {
-            var request = event.currentTarget;
-            console.log("get data : ", request.response);
-            var data = JSON.parse(request.response);
+        p.onGetJsSdkSignComplete = function (result) {
+            console.info("获得签名", result);
+            var data = JSON.parse(result.result);
             //2 微信js-sdk初始化 成功后做标记
             var config = new BodyConfig();
             config.debug = MixApp.WxConfig.JsSdkIsOpenDebug;

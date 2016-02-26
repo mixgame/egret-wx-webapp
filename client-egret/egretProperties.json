@@ -22,12 +22,12 @@
       "name": "tween"
     },
     {
-      "name": "weixinapi",
-      "path": "../../egret-modules-list/weixinapi/libsrc"
-    },
-    {
       "name": "leanCloud",
       "path": "../../egret-modules-list/leanCloud/libsrc"
+    },
+    {
+      "name": "weixinapi",
+      "path": "../../egret-modules-list/weixinapi/libsrc"
     }
   ]
 }

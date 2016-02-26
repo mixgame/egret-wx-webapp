@@ -7,8 +7,8 @@ module MixApp {
         // 不兼容时递加 . 兼容并增加功能时递加 . bug修复递加
         static AppVer:string = "0.0.1";
         
-        //本地测试 跳过wx认证
-        static LocalTest:boolean = false;
+        //是否做网页登录
+        static isWebLogin:boolean = false;
     }
 	/** 
 	 * wx相关的 的基本配置
@@ -45,6 +45,8 @@ module MixApp {
 	 * 需要到 leancloud 的自行申请找号的建立应用
 	 */ 
 	export class AvConfig {
-	    static AppId:string;
+    	static IsOpenPro:boolean = false; //是否开启生产环境 即正式版
+	    static AppId:string = "nvgLctz1xnvxqF7kNXJ8PVxA-gzGzoHsz";
+		static AppKey:string = "o9KgsC5CUhbLSyfNiXLkr96B";
 	}
 }
