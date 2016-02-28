@@ -12,7 +12,7 @@ export class wx {
     static jsUpdateTime:number = 0;
     //获得随机字符串
     public static getJsSdkNonceStr(max:number):string{
-        var str:string = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+        var str:string = "1234567890qwertyuiopasdfghjklzxcvbnm";
         var arr:Array<string> = str.split("");
         var nonceStr:string = "";
 
@@ -23,8 +23,7 @@ export class wx {
         return nonceStr;
     }
     //sha1加密
-    public static cryptoSha1(shaObj:any):string{
-        var shaStr = querystring.stringify(shaObj);
+    public static cryptoSha1(shaStr:string):string{
         var shanum = crypto.createHash('sha1');
         shanum.update(shaStr);
         return shanum.digest('hex');

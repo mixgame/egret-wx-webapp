@@ -1,12 +1,18 @@
 var MixApp;
 (function (MixApp) {
     /**
-     * web app的主控制类
+     * mixapp 的界面主控类
+     * 界面直接的切换和显示都统一调用此类
      */
     var AppMain = (function () {
         function AppMain() {
         }
         AppMain.initLogin = function () {
+            AppMain.Main.removeChildren();
+            AppMain.Main.touchEnabled = false;
+            var test = new TestMain();
+            AppMain.Main.addChild(test);
+            return;
             console.log("code::", MixApp.UserConfig.code);
             AppMain.Home = new HomeMain();
             AppMain.Home.width = AppMain.Main.width;

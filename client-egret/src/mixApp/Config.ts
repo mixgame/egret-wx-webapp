@@ -4,11 +4,13 @@ module MixApp {
      */ 
     export class WebAppConfig {
         static AppName:string = "mix的测试app";
-        // 不兼容时递加 . 兼容并增加功能时递加 . bug修复递加
+        // 不兼容版本递加 . 兼容并增加功能版本递加 . bug修复递加
         static AppVer:string = "0.0.1";
         
         //是否做网页登录
         static isWebLogin:boolean = false;
+        //是否开启微信js
+        static isOpenJsSdk:boolean = false;
     }
 	/** 
 	 * wx相关的 的基本配置
@@ -18,8 +20,6 @@ module MixApp {
 		static AppId:string = "wx2b89597d2c9c105b";
 		//网页授权认证返回state字符串
 		static CallBackStateStr:string = "MixTestOk";
-		//微信js-sdk签名计算地址
-        static JsSdkSignUrl:string = "http://wx.mixgame.mobi/wx/json.php";
         //所需调用的js功能
         //http://mp.weixin.qq.com/wiki/11/74ad127cc054f6b80759c40f77ec03db.html#.E9.99.84.E5.BD.952-.E6.89.80.E6.9C.89JS.E6.8E.A5.E5.8F.A3.E5.88.97.E8.A1.A8
         static JsApiList: Array<string> = [

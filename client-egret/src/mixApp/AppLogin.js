@@ -1,9 +1,13 @@
 var MixApp;
 (function (MixApp) {
-    var WebApp = (function () {
-        function WebApp() {
+    /*
+    mixapp 的登录类
+    现阶段就单指微信的登录方式
+     */
+    var AppLogin = (function () {
+        function AppLogin() {
         }
-        WebApp.prototype.getUrlFieldWord = function (field) {
+        AppLogin.prototype.getUrlFieldWord = function (field) {
             //获取全部地址
             var index;
             var url = window.location.search;
@@ -25,8 +29,9 @@ var MixApp;
             //都没有返回空字符
             return "";
         };
-        WebApp.prototype.checkUrl = function () {
+        AppLogin.prototype.checkUrl = function () {
             if (!MixApp.WebAppConfig.isWebLogin) {
+                console.info("关闭了微信web登录");
                 this.getWxJsSdkSign();
                 this.loadAppRes();
                 return;
@@ -48,7 +53,7 @@ var MixApp;
             }
         };
         //微信认证登录
-        WebApp.prototype.wxAuthToken = function () {
+        AppLogin.prototype.wxAuthToken = function () {
             //跳转到微信认证页面 请求登录
             console.log("跳转页面 请求微信认证");
             var url = "https://open.weixin.qq.com/connect/oauth2/authorize";
@@ -67,11 +72,17 @@ var MixApp;
             //打开微信认证网页
             window.location.href = url;
         };
-        WebApp.prototype.getWxJsSdkSign = function () {
+        AppLogin.prototype.getWxJsSdkSign = function () {
             AV.initialize(MixApp.AvConfig.AppId, MixApp.AvConfig.AppKey);
             AV.setProduction(MixApp.AvConfig.IsOpenPro);
+            //是否开启微信js
+            if (!MixApp.WebAppConfig.isOpenJsSdk) {
+                console.info("关闭了微信jssdk初始化");
+                this.wxJsSdkComplete();
+                return;
+            }
             console.log("微信js-sdk开始初始化");
-            var url = encodeURIComponent(window.location.href);
+            var url = window.location.href;
             //1 请求自己的服务器获取签名
             var self = this;
             AV.Cloud.run('weixin-get-jsSdkSign', { url: url }, {
@@ -83,16 +94,15 @@ var MixApp;
                 }
             });
         };
-        WebApp.prototype.onGetJsSdkSignComplete = function (result) {
-            console.info("获得签名", result);
-            var data = JSON.parse(result.result);
+        AppLogin.prototype.onGetJsSdkSignComplete = function (data) {
+            console.info("获得签名", data);
             //2 微信js-sdk初始化 成功后做标记
             var config = new BodyConfig();
             config.debug = MixApp.WxConfig.JsSdkIsOpenDebug;
             config.appId = MixApp.WxConfig.AppId;
             config.timestamp = data.timestamp;
-            config.nonceStr = data.noncestr;
-            config.signature = data.signature;
+            config.nonceStr = data.nonceStr;
+            config.signature = data.sign;
             config.jsApiList = MixApp.WxConfig.JsApiList;
             wx.config(config);
             //3 成功后 执行login
@@ -100,24 +110,26 @@ var MixApp;
             wx.ready(function (res) {
                 if (res.errMsg === "config:ok") {
                     that.wxJsSdkComplete();
+                    return;
                 }
+                console.log("wx res::::", res);
             });
         };
         //微信js-sdk初始完成
-        WebApp.prototype.wxJsSdkComplete = function () {
+        AppLogin.prototype.wxJsSdkComplete = function () {
             console.log("微信js-sdk初始成功");
             this.isGetWxJsSdkSign = true;
             this.login();
         };
-        WebApp.prototype.loadAppRes = function () {
+        AppLogin.prototype.loadAppRes = function () {
             //1 设置监听器
             RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadAppResComplete, this);
             //2 加载需要的资源组
-            RES.loadGroup("app");
             console.log("开始加载app资源组");
+            RES.loadGroup("app");
         };
         //app所需资源加载完成
-        WebApp.prototype.loadAppResComplete = function (event) {
+        AppLogin.prototype.loadAppResComplete = function (event) {
             if (event.groupName === "app") {
                 console.log("app资源加载成功");
                 //1 加载完成 做标记
@@ -131,7 +143,7 @@ var MixApp;
         /*
         待js-sdk初始化 并 资源加载完毕后 登录app
         */
-        WebApp.prototype.login = function () {
+        AppLogin.prototype.login = function () {
             //判断 js-sdk与资源加载是否都已经完成
             //完成则进入app页面
             if (this.isLoadAppRes && this.isGetWxJsSdkSign) {
@@ -140,7 +152,7 @@ var MixApp;
                 MixApp.AppMain.initLogin();
             }
         };
-        return WebApp;
+        return AppLogin;
     })();
-    MixApp.WebApp = WebApp;
+    MixApp.AppLogin = AppLogin;
 })(MixApp || (MixApp = {}));

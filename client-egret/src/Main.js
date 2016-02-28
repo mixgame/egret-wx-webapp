@@ -139,7 +139,7 @@ var Main = (function (_super) {
         button.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onButtonClick, this);
     };
     Main.prototype.onButtonClick = function (e) {
-        var login = new MixApp.WebApp();
+        var login = new MixApp.AppLogin();
         login.checkUrl();
     };
     return Main;

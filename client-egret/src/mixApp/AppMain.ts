@@ -1,6 +1,7 @@
 module MixApp {
     /**
-     * web app的主控制类
+     * mixapp 的界面主控类
+     * 界面直接的切换和显示都统一调用此类
      */ 
     export class AppMain {
         static Main:Main;           //总ui层
@@ -10,6 +11,13 @@ module MixApp {
         static Notice:NoticeMain;   //全局通知层
         
         static initLogin(){
+            AppMain.Main.removeChildren();
+            AppMain.Main.touchEnabled = false;
+            var test:TestMain = new TestMain();
+            AppMain.Main.addChild(test);
+            return;
+
+
             console.log("code::",MixApp.UserConfig.code);
             AppMain.Home = new HomeMain();
             AppMain.Home.width = AppMain.Main.width;

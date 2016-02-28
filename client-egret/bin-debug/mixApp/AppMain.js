@@ -8,6 +8,11 @@ var MixApp;
         }
         var d = __define,c=AppMain,p=c.prototype;
         AppMain.initLogin = function () {
+            AppMain.Main.removeChildren();
+            AppMain.Main.touchEnabled = false;
+            var test = new TestMain();
+            AppMain.Main.addChild(test);
+            return;
             console.log("code::", MixApp.UserConfig.code);
             AppMain.Home = new HomeMain();
             AppMain.Home.width = AppMain.Main.width;

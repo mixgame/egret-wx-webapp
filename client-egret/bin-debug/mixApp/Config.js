@@ -12,6 +12,7 @@ var MixApp;
         WebAppConfig.AppVer = "0.0.1";
         //是否做网页登录
         WebAppConfig.isWebLogin = false;
+        WebAppConfig.isOpenJsSdk = false;
         return WebAppConfig;
     })();
     MixApp.WebAppConfig = WebAppConfig;

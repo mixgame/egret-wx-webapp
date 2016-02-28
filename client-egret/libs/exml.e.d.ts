@@ -1,4 +1,8 @@
 declare module skins{
+	class SlideGroupSkin extends eui.Skin{
+	}
+}
+declare module skins{
 	class HomeMainSkin extends eui.Skin{
 	}
 }

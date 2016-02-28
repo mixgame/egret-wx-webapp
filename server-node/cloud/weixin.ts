@@ -2,6 +2,7 @@
 ///<reference path=".././typings/leancloud/av.d.ts"/>
 import AV = require('leanengine');
 import mix = require("./mix");
+import jssign = require('./jssign');
 
 //定时任务 获取token和ticket
 AV.Cloud.define('timing-weixin-updateTokenTicket', function () {
@@ -18,20 +19,9 @@ AV.Cloud.define('weixin-get-jsSdkSign', function (req,res) {
         return
     }
 
-    var obj = {
-        noncestr : mix.wx.getJsSdkNonceStr(16),
-        jsapi_ticket : mix.wx.jsTicket,
-        timestamp : new Date().getTime(),
-        url : req.params.url
-    };
-    var data = {};
-    var arr1 = ['timestamp','noncestr','url','jsapi_ticket'];
-    var arr2 = arr1.sort();
-    for(var i=0;i<arr2.length;i++){
-        data[arr2[i]] = obj[arr2[i]];
-    }
+    var obj:any = jssign.sign(mix.wx.jsTicket,req.params.url);
 
-    obj['sign'] = mix.wx.cryptoSha1(data);
-    obj.jsapi_ticket = "";
+    obj['sign'] = mix.wx.cryptoSha1(jssign.raw(obj));
+    //obj.jsapi_ticket = "";
     res.success(obj);
 });

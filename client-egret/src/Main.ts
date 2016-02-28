@@ -138,7 +138,7 @@ class Main extends eui.UILayer {
     }
 
     private onButtonClick(e: egret.TouchEvent) {
-        var login:MixApp.WebApp = new MixApp.WebApp();
+        var login:MixApp.AppLogin = new MixApp.AppLogin();
         login.checkUrl();
     }
 }

@@ -1,12 +1,11 @@
 var request = require('request');
 var crypto = require('crypto');
-var querystring = require('querystring');
 var wx = (function () {
     function wx() {
     }
     //获得随机字符串
     wx.getJsSdkNonceStr = function (max) {
-        var str = "1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+        var str = "1234567890qwertyuiopasdfghjklzxcvbnm";
         var arr = str.split("");
         var nonceStr = "";
         for (var i = 0; i < max; i++) {
@@ -15,8 +14,7 @@ var wx = (function () {
         return nonceStr;
     };
     //sha1加密
-    wx.cryptoSha1 = function (shaObj) {
-        var shaStr = querystring.stringify(shaObj);
+    wx.cryptoSha1 = function (shaStr) {
         var shanum = crypto.createHash('sha1');
         shanum.update(shaStr);
         return shanum.digest('hex');

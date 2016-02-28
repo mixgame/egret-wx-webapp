@@ -28,6 +28,7 @@ var MixApp;
         };
         p.checkUrl = function () {
             if (!MixApp.WebAppConfig.isWebLogin) {
+                console.info("关闭了微信web登录");
                 this.getWxJsSdkSign();
                 this.loadAppRes();
                 return;
@@ -71,8 +72,14 @@ var MixApp;
         p.getWxJsSdkSign = function () {
             AV.initialize(MixApp.AvConfig.AppId, MixApp.AvConfig.AppKey);
             AV.setProduction(MixApp.AvConfig.IsOpenPro);
+            //是否开启微信js
+            if (!MixApp.WebAppConfig.isOpenJsSdk) {
+                console.info("关闭了微信jssdk初始化");
+                this.wxJsSdkComplete();
+                return;
+            }
             console.log("微信js-sdk开始初始化");
-            var url = encodeURIComponent(window.location.href);
+            var url = window.location.href;
             //1 请求自己的服务器获取签名
             var self = this;
             AV.Cloud.run('weixin-get-jsSdkSign', { url: url }, {
@@ -84,16 +91,15 @@ var MixApp;
                 }
             });
         };
-        p.onGetJsSdkSignComplete = function (result) {
-            console.info("获得签名", result);
-            var data = JSON.parse(result.result);
+        p.onGetJsSdkSignComplete = function (data) {
+            console.info("获得签名", data);
             //2 微信js-sdk初始化 成功后做标记
             var config = new BodyConfig();
             config.debug = MixApp.WxConfig.JsSdkIsOpenDebug;
             config.appId = MixApp.WxConfig.AppId;
             config.timestamp = data.timestamp;
-            config.nonceStr = data.noncestr;
-            config.signature = data.signature;
+            config.nonceStr = data.nonceStr;
+            config.signature = data.sign;
             config.jsApiList = MixApp.WxConfig.JsApiList;
             wx.config(config);
             //3 成功后 执行login
@@ -101,7 +107,9 @@ var MixApp;
             wx.ready(function (res) {
                 if (res.errMsg === "config:ok") {
                     that.wxJsSdkComplete();
+                    return;
                 }
+                console.log("wx res::::", res);
             });
         };
         //微信js-sdk初始完成
@@ -114,8 +122,8 @@ var MixApp;
             //1 设置监听器
             RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadAppResComplete, this);
             //2 加载需要的资源组
-            RES.loadGroup("app");
             console.log("开始加载app资源组");
+            RES.loadGroup("app");
         };
         //app所需资源加载完成
         p.loadAppResComplete = function (event) {
