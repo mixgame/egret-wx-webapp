@@ -1,12 +1,24 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var MixEmpty;
 (function (MixEmpty) {
+    /*
+        滑动展示
+        左右或上下滑动 展示内部信息
+
+        2016-2-27 暂时只提供横向布局  未来需要竖向时 新加皮肤更改即可
+        addEui 添加进来的元素 会自动将宽高设置与组件相同
+     */
     var SlideGroup = (function (_super) {
         __extends(SlideGroup, _super);
         function SlideGroup(moveType) {
             if (moveType === void 0) { moveType = MixEmpty.SlideGroup.MOVETYPE_HOR; }
             _super.call(this);
             this.MoveType = moveType;
-            this.skinName = "skins.SlideGroupSkin";
+            this.skinName = "MixSkins.SlideGroupSkin";
             this.touchEnabled = true;
             this.showScroller.bounces = false;
             this.showScroller.throwSpeed = 0;
@@ -15,17 +27,16 @@ var MixEmpty;
             this.showScroller.addEventListener(eui.UIEvent.CHANGE, this.onTouchMoveing, this);
             this.showScroller.addEventListener(eui.UIEvent.CHANGE_END, this.onTouchMoveEnd, this);
         }
-        var d = __define,c=SlideGroup,p=c.prototype;
-        p.addEui = function (oneEui) {
+        SlideGroup.prototype.addEui = function (oneEui) {
             console.log("添加eui");
             oneEui.width = this.width;
             oneEui.height = this.height;
             this.showGroup.addChild(oneEui);
         };
-        p.removeEui = function () {
+        SlideGroup.prototype.removeEui = function () {
             this.showScroller.removeChildren();
         };
-        p.onTOuchMoveStart = function (event) {
+        SlideGroup.prototype.onTOuchMoveStart = function (event) {
             var scroll = event.target;
             if (this.MoveType === MixEmpty.SlideGroup.MOVETYPE_HOR) {
                 this.posStart = scroll.viewport.scrollH;
@@ -34,11 +45,11 @@ var MixEmpty;
                 this.posStart = scroll.viewport.scrollV;
             }
         };
-        p.onTouchMoveing = function (event) {
+        SlideGroup.prototype.onTouchMoveing = function (event) {
             var scroll = event.target;
             this.isMove = true;
         };
-        p.onTouchMoveEnd = function (event) {
+        SlideGroup.prototype.onTouchMoveEnd = function (event) {
             if (!this.isMove) {
                 return;
             }
@@ -69,5 +80,4 @@ var MixEmpty;
         return SlideGroup;
     })(eui.Scroller);
     MixEmpty.SlideGroup = SlideGroup;
-    egret.registerClass(SlideGroup,'MixEmpty.SlideGroup');
 })(MixEmpty || (MixEmpty = {}));

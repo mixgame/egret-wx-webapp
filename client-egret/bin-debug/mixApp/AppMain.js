@@ -1,12 +1,12 @@
 var MixApp;
 (function (MixApp) {
     /**
-     * web app的主控制类
+     * mixapp 的界面主控类
+     * 界面直接的切换和显示都统一调用此类
      */
     var AppMain = (function () {
         function AppMain() {
         }
-        var d = __define,c=AppMain,p=c.prototype;
         AppMain.initLogin = function () {
             AppMain.Main.removeChildren();
             AppMain.Main.touchEnabled = false;
@@ -50,5 +50,4 @@ var MixApp;
         return AppMain;
     })();
     MixApp.AppMain = AppMain;
-    egret.registerClass(AppMain,'MixApp.AppMain');
 })(MixApp || (MixApp = {}));

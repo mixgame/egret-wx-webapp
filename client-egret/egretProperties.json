@@ -1,33 +1,33 @@
 {
-  "native": {
-    "path_ignore": []
-  },
-  "publish": {
-    "web": 0,
-    "native": 1,
-    "path": "bin-release"
-  },
-  "egret_version": "3.0.2",
-  "modules": [
-    {
-      "name": "egret"
-    },
-    {
-      "name": "eui"
-    },
-    {
-      "name": "res"
-    },
-    {
-      "name": "tween"
-    },
-    {
-      "name": "leanCloud",
-      "path": "../../egret-modules-list/leanCloud/libsrc"
-    },
-    {
-      "name": "weixinapi",
-      "path": "../../egret-modules-list/weixinapi/libsrc"
-    }
-  ]
+	"native": {
+		"path_ignore": []
+	},
+	"publish": {
+		"web": 0,
+		"native": 1,
+		"path": "bin-release"
+	},
+	"egret_version": "3.0.3",
+	"modules": [
+		{
+			"name": "egret"
+		},
+		{
+			"name": "eui"
+		},
+		{
+			"name": "res"
+		},
+		{
+			"name": "tween"
+		},
+		{
+			"name": "leanCloud",
+			"path": "../../egret-modules-list/leanCloud/libsrc"
+		},
+		{
+			"name": "weixinapi",
+			"path": "../../egret-modules-list/weixinapi/libsrc"
+		}
+	]
 }

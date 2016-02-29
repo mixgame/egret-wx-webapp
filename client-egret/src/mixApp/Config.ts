@@ -48,5 +48,6 @@ module MixApp {
     	static IsOpenPro:boolean = false; //是否开启生产环境 即正式版
 	    static AppId:string = "nvgLctz1xnvxqF7kNXJ8PVxA-gzGzoHsz";
 		static AppKey:string = "o9KgsC5CUhbLSyfNiXLkr96B";
+        static analytics:AV.analyticsOnly;
 	}
 }

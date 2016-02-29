@@ -1,8 +1,4 @@
 declare module skins{
-	class SlideGroupSkin extends eui.Skin{
-	}
-}
-declare module skins{
 	class HomeMainSkin extends eui.Skin{
 	}
 }
@@ -40,5 +36,9 @@ declare module skins{
 }
 declare module skins{
 	class VScrollBarSkin extends eui.Skin{
+	}
+}
+declare module MixSkins{
+	class SlideGroupSkin extends eui.Skin{
 	}
 }

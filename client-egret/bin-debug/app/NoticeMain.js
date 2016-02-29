@@ -1,3 +1,8 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 /**
  *
  * @author
@@ -11,10 +16,8 @@ var NoticeMain = (function (_super) {
         this.skinName = "skins.NoticeMainSkin";
         this.closeBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onClickCloseBtn, this);
     }
-    var d = __define,c=NoticeMain,p=c.prototype;
-    p.onClickCloseBtn = function () {
+    NoticeMain.prototype.onClickCloseBtn = function () {
         MixApp.AppMain.closeNotice();
     };
     return NoticeMain;
 })(eui.Component);
-egret.registerClass(NoticeMain,'NoticeMain');

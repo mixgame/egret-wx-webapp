@@ -1,10 +1,13 @@
 var MixApp;
 (function (MixApp) {
-    var WebApp = (function () {
-        function WebApp() {
+    /*
+    mixapp 的登录类
+    现阶段就单指微信的登录方式
+     */
+    var AppLogin = (function () {
+        function AppLogin() {
         }
-        var d = __define,c=WebApp,p=c.prototype;
-        p.getUrlFieldWord = function (field) {
+        AppLogin.prototype.getUrlFieldWord = function (field) {
             //获取全部地址
             var index;
             var url = window.location.search;
@@ -26,7 +29,7 @@ var MixApp;
             //都没有返回空字符
             return "";
         };
-        p.checkUrl = function () {
+        AppLogin.prototype.checkUrl = function () {
             if (!MixApp.WebAppConfig.isWebLogin) {
                 console.info("关闭了微信web登录");
                 this.getWxJsSdkSign();
@@ -50,7 +53,7 @@ var MixApp;
             }
         };
         //微信认证登录
-        p.wxAuthToken = function () {
+        AppLogin.prototype.wxAuthToken = function () {
             //跳转到微信认证页面 请求登录
             console.log("跳转页面 请求微信认证");
             var url = "https://open.weixin.qq.com/connect/oauth2/authorize";
@@ -69,9 +72,20 @@ var MixApp;
             //打开微信认证网页
             window.location.href = url;
         };
-        p.getWxJsSdkSign = function () {
+        AppLogin.prototype.getWxJsSdkSign = function () {
+            //初始化AV存储
             AV.initialize(MixApp.AvConfig.AppId, MixApp.AvConfig.AppKey);
             AV.setProduction(MixApp.AvConfig.IsOpenPro);
+            //初始化AV统计
+            MixApp.AvConfig.analytics = AV.analytics({
+                appId: MixApp.AvConfig.AppId,
+                appKey: MixApp.AvConfig.AppKey,
+                version: MixApp.WebAppConfig.AppVer,
+                channel: "weixin"
+            });
+            MixApp.AvConfig.analytics.send({ event: 'test-1', attr: { a1: 'a1', b2: 'b2' }, duration: 3000 }, function (result) {
+                console.log(result);
+            });
             //是否开启微信js
             if (!MixApp.WebAppConfig.isOpenJsSdk) {
                 console.info("关闭了微信jssdk初始化");
@@ -91,7 +105,7 @@ var MixApp;
                 }
             });
         };
-        p.onGetJsSdkSignComplete = function (data) {
+        AppLogin.prototype.onGetJsSdkSignComplete = function (data) {
             console.info("获得签名", data);
             //2 微信js-sdk初始化 成功后做标记
             var config = new BodyConfig();
@@ -113,12 +127,12 @@ var MixApp;
             });
         };
         //微信js-sdk初始完成
-        p.wxJsSdkComplete = function () {
+        AppLogin.prototype.wxJsSdkComplete = function () {
             console.log("微信js-sdk初始成功");
             this.isGetWxJsSdkSign = true;
             this.login();
         };
-        p.loadAppRes = function () {
+        AppLogin.prototype.loadAppRes = function () {
             //1 设置监听器
             RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadAppResComplete, this);
             //2 加载需要的资源组
@@ -126,7 +140,7 @@ var MixApp;
             RES.loadGroup("app");
         };
         //app所需资源加载完成
-        p.loadAppResComplete = function (event) {
+        AppLogin.prototype.loadAppResComplete = function (event) {
             if (event.groupName === "app") {
                 console.log("app资源加载成功");
                 //1 加载完成 做标记
@@ -140,7 +154,7 @@ var MixApp;
         /*
         待js-sdk初始化 并 资源加载完毕后 登录app
         */
-        p.login = function () {
+        AppLogin.prototype.login = function () {
             //判断 js-sdk与资源加载是否都已经完成
             //完成则进入app页面
             if (this.isLoadAppRes && this.isGetWxJsSdkSign) {
@@ -149,8 +163,7 @@ var MixApp;
                 MixApp.AppMain.initLogin();
             }
         };
-        return WebApp;
+        return AppLogin;
     })();
-    MixApp.WebApp = WebApp;
-    egret.registerClass(WebApp,'MixApp.WebApp');
+    MixApp.AppLogin = AppLogin;
 })(MixApp || (MixApp = {}));

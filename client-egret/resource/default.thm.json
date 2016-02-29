@@ -1,7 +1,6 @@
 {
   "autoGenerateExmlsList": true,
   "exmls": [
-    "resource/app_eui/empty/SlideGroupSkin.exml",
     "resource/app_eui/voucher/VoucherSingleSkin.exml",
     "resource/app_eui/user/UserSmallSkin.exml",
     "resource/app_eui/main/HomeMainSkin.exml",
@@ -11,7 +10,8 @@
     "resource/eui_skins/ButtonSkin.exml",
     "resource/eui_skins/HScrollBarSkin.exml",
     "resource/eui_skins/ScrollerSkin.exml",
-    "resource/eui_skins/VScrollBarSkin.exml"
+    "resource/eui_skins/VScrollBarSkin.exml",
+    "resource/mix_eui/empty/SlideGroupSkin.exml"
   ],
   "skins": {
     "eui.Button": "resource/eui_skins/ButtonSkin.exml",

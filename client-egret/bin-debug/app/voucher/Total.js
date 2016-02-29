@@ -1,3 +1,8 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var Voucher;
 (function (Voucher) {
     /**
@@ -10,9 +15,7 @@ var Voucher;
         function Total() {
             _super.call(this);
         }
-        var d = __define,c=Total,p=c.prototype;
         return Total;
     })(eui.Component);
     Voucher.Total = Total;
-    egret.registerClass(Total,'Voucher.Total');
 })(Voucher || (Voucher = {}));

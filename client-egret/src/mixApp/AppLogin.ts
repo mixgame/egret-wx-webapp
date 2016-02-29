@@ -74,8 +74,20 @@ module MixApp {
         
         private isGetWxJsSdkSign:boolean;
         private getWxJsSdkSign(){
+            //初始化AV存储
             AV.initialize(MixApp.AvConfig.AppId,MixApp.AvConfig.AppKey);
             AV.setProduction(MixApp.AvConfig.IsOpenPro);
+            //初始化AV统计
+            MixApp.AvConfig.analytics = AV.analytics({
+                appId:MixApp.AvConfig.AppId,
+                appKey:MixApp.AvConfig.AppKey,
+                version:MixApp.WebAppConfig.AppVer,
+                channel:"weixin"
+            });
+
+            MixApp.AvConfig.analytics.send({event:'test-1',attr:{a1:'a1',b2:'b2'},duration:3000},(result)=>{
+                console.log(result);
+            });
 
             //是否开启微信js
             if(!MixApp.WebAppConfig.isOpenJsSdk){

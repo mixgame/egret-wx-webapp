@@ -1,3 +1,8 @@
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
 var TestMain = (function (_super) {
     __extends(TestMain, _super);
     function TestMain() {
@@ -14,7 +19,5 @@ var TestMain = (function (_super) {
         rect3.label = "33";
         empty.addEui(rect3);
     }
-    var d = __define,c=TestMain,p=c.prototype;
     return TestMain;
 })(eui.Component);
-egret.registerClass(TestMain,'TestMain');

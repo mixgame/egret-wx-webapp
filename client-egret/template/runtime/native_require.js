@@ -10,8 +10,6 @@ var game_file_list = [
 	"libs/modules/leanCloud/leanCloud.js",
 	"libs/modules/weixinapi/weixinapi.js",
 	"http://res.wx.qq.com/open/js/jweixin-1.1.0.js",
-	"https://cdn1.lncld.net/static/js/av-mini-0.6.4.js",
-	"bin-debug/app/empty/SlideGroup.js",
 	"bin-debug/app/HomeMain.js",
 	"bin-debug/app/NoticeMain.js",
 	"bin-debug/app/PayMain.js",
@@ -22,9 +20,10 @@ var game_file_list = [
 	"bin-debug/AssetAdapter.js",
 	"bin-debug/LoadingUI.js",
 	"bin-debug/Main.js",
+	"bin-debug/mixApp/AppLogin.js",
 	"bin-debug/mixApp/AppMain.js",
 	"bin-debug/mixApp/Config.js",
-	"bin-debug/mixApp/AppLogin.js",
+	"bin-debug/mixApp/empty/SlideGroup.js",
 	"bin-debug/ThemeAdapter.js",
 	//----auto game_file_list end----
 ];
