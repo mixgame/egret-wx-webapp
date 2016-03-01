@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>web view</title>
+</head>
+<body>
+<div style="width: 100%;height: 100%">
+<script type="text/javascript">
+    //京东橱窗
+    var media_760_90 = {};
+    media_760_90.ids = "506:6";
+    media_760_90.pid = "CP6YoIazKhCEucl2GgAghY/jwAEqAA==";
+    media_760_90.width = 760;
+    media_760_90.height = 90;
+    media_760_90.p = "ABoGVRJeFQsUNwpfBkgyTUMIRmtKRk9aZV8ETVxNNwpfBkgyUnswfR5iVERkI2kTawtHGStvExJgRAtZK1kcCxEEVB5SFzIRAlwcXBMBFQ5lKwRRX083HnVaJV1WWggrWxAGFQ5VGFkXAxIHVita";
+
+    var media_468_90 = {};
+    media_468_90.ids = "508:6";
+    media_468_90.pid = "COOPpoazKhCEucl2GgAgjpriwAEqAA==";
+    media_468_90.width = 468;
+    media_468_90.height = 90;
+    media_468_90.p = "ABoGVRJeFQsUNwpfBkgyTUMIRmtKRk9aZV8ETVxNNwpfBkgyVWAsElMTUhRiN1MGRl9MdDN%2BL3F8VAtZK1kcCxEEVB5SFzIRAlwcXBMBFQ5lKwRRX083HnVaJV1WWggrWxAGFQ5VGF4WBBEFUita";
+
+
+    //根据网页宽度，执行不同的比例代码
+    var winWidth = window.innerWidth;
+    var jd_union_unid = "248667268";   //这里修改成京东联盟id
+    var jd_union_euid = "";
+    var jd_ad_ids = "";
+    var jd_union_pid = "";
+    var jd_width = 0;
+    var jd_height = 0;
+    var p = "";
+
+    if(winWidth > 760){
+        jd_ad_ids = media_760_90.ids;
+        jd_union_pid = media_760_90.pid;
+        jd_width = media_760_90.width;
+        jd_height = media_760_90.height;
+        p = media_760_90.p;
+    }else {
+        jd_ad_ids = media_468_90.ids;
+        jd_union_pid = media_468_90.pid;
+        jd_width = media_468_90.width;
+        jd_height = media_468_90.height;
+        p = media_468_90.p;
+    }
+</script>
+
+<script type="text/javascript" charset="utf-8" src="http://u.x.jd.com/static/js/auto.js">
+</script>
+</div>
+</body>
+</html>

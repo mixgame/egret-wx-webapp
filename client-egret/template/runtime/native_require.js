@@ -24,6 +24,7 @@ var game_file_list = [
 	"bin-debug/mixApp/AppMain.js",
 	"bin-debug/mixApp/Config.js",
 	"bin-debug/mixApp/empty/SlideGroup.js",
+	"bin-debug/mixApp/empty/WebView.js",
 	"bin-debug/ThemeAdapter.js",
 	//----auto game_file_list end----
 ];

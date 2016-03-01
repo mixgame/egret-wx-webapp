@@ -129,6 +129,7 @@ class Main extends eui.UILayer {
      */
     protected startCreateScene(): void {
         MixApp.AppMain.Main = this;
+        MixApp.AppMain.Stage = this.stage;
         var button = new eui.Button();
         button.label = "Click!";
         button.horizontalCenter = 0;

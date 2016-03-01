@@ -7,7 +7,8 @@ var MixApp;
     var AppLogin = (function () {
         function AppLogin() {
         }
-        AppLogin.prototype.getUrlFieldWord = function (field) {
+        var d = __define,c=AppLogin,p=c.prototype;
+        p.getUrlFieldWord = function (field) {
             //获取全部地址
             var index;
             var url = window.location.search;
@@ -29,7 +30,7 @@ var MixApp;
             //都没有返回空字符
             return "";
         };
-        AppLogin.prototype.checkUrl = function () {
+        p.checkUrl = function () {
             if (!MixApp.WebAppConfig.isWebLogin) {
                 console.info("关闭了微信web登录");
                 this.getWxJsSdkSign();
@@ -53,7 +54,7 @@ var MixApp;
             }
         };
         //微信认证登录
-        AppLogin.prototype.wxAuthToken = function () {
+        p.wxAuthToken = function () {
             //跳转到微信认证页面 请求登录
             console.log("跳转页面 请求微信认证");
             var url = "https://open.weixin.qq.com/connect/oauth2/authorize";
@@ -72,7 +73,7 @@ var MixApp;
             //打开微信认证网页
             window.location.href = url;
         };
-        AppLogin.prototype.getWxJsSdkSign = function () {
+        p.getWxJsSdkSign = function () {
             //初始化AV存储
             AV.initialize(MixApp.AvConfig.AppId, MixApp.AvConfig.AppKey);
             AV.setProduction(MixApp.AvConfig.IsOpenPro);
@@ -105,7 +106,7 @@ var MixApp;
                 }
             });
         };
-        AppLogin.prototype.onGetJsSdkSignComplete = function (data) {
+        p.onGetJsSdkSignComplete = function (data) {
             console.info("获得签名", data);
             //2 微信js-sdk初始化 成功后做标记
             var config = new BodyConfig();
@@ -127,12 +128,12 @@ var MixApp;
             });
         };
         //微信js-sdk初始完成
-        AppLogin.prototype.wxJsSdkComplete = function () {
+        p.wxJsSdkComplete = function () {
             console.log("微信js-sdk初始成功");
             this.isGetWxJsSdkSign = true;
             this.login();
         };
-        AppLogin.prototype.loadAppRes = function () {
+        p.loadAppRes = function () {
             //1 设置监听器
             RES.addEventListener(RES.ResourceEvent.GROUP_COMPLETE, this.loadAppResComplete, this);
             //2 加载需要的资源组
@@ -140,7 +141,7 @@ var MixApp;
             RES.loadGroup("app");
         };
         //app所需资源加载完成
-        AppLogin.prototype.loadAppResComplete = function (event) {
+        p.loadAppResComplete = function (event) {
             if (event.groupName === "app") {
                 console.log("app资源加载成功");
                 //1 加载完成 做标记
@@ -154,7 +155,7 @@ var MixApp;
         /*
         待js-sdk初始化 并 资源加载完毕后 登录app
         */
-        AppLogin.prototype.login = function () {
+        p.login = function () {
             //判断 js-sdk与资源加载是否都已经完成
             //完成则进入app页面
             if (this.isLoadAppRes && this.isGetWxJsSdkSign) {
@@ -166,4 +167,5 @@ var MixApp;
         return AppLogin;
     })();
     MixApp.AppLogin = AppLogin;
+    egret.registerClass(AppLogin,'MixApp.AppLogin');
 })(MixApp || (MixApp = {}));

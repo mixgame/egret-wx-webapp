@@ -1,8 +1,3 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
 var Voucher;
 (function (Voucher) {
     /**
@@ -16,7 +11,9 @@ var Voucher;
             _super.call(this);
             this.skinName = "skins.VoucherSingleSkin";
         }
+        var d = __define,c=Single,p=c.prototype;
         return Single;
     })(eui.Component);
     Voucher.Single = Single;
+    egret.registerClass(Single,'Voucher.Single');
 })(Voucher || (Voucher = {}));

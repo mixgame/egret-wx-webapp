@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/client-egret/src/mixApp/empty/WebView.ts" line="49" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="db1c73fa-a3d5-49a9-b1ff-406927f57901" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-egret/bin-debug/app/empty/SlideGroup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/WebApp.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/README.md" afterPath="$PROJECT_DIR$/client-egret/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/AssetAdapter.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/AssetAdapter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/LoadingUI.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/LoadingUI.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/Main.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/Main.js" />
@@ -17,9 +17,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/app/user/Small.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/app/user/Small.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/app/voucher/Single.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/app/voucher/Single.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/app/voucher/Total.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/app/voucher/Total.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/AppLogin.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/AppLogin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/AppMain.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/AppMain.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/Config.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/Config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/egretProperties.json" afterPath="$PROJECT_DIR$/client-egret/egretProperties.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/empty/SlideGroup.js" afterPath="$PROJECT_DIR$/client-egret/bin-debug/mixApp/empty/SlideGroup.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/index.html" afterPath="$PROJECT_DIR$/client-egret/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/exml.e.d.ts" afterPath="$PROJECT_DIR$/client-egret/libs/exml.e.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/egret/egret.d.ts" afterPath="$PROJECT_DIR$/client-egret/libs/modules/egret/egret.d.ts" />
@@ -35,12 +36,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.d.ts" afterPath="$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.js" afterPath="$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.min.js" afterPath="$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/res/res.d.ts" afterPath="$PROJECT_DIR$/client-egret/libs/modules/res/res.d.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/res/res.js" afterPath="$PROJECT_DIR$/client-egret/libs/modules/res/res.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/tween/tween.d.ts" afterPath="$PROJECT_DIR$/client-egret/libs/modules/tween/tween.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/libs/modules/tween/tween.js" afterPath="$PROJECT_DIR$/client-egret/libs/modules/tween/tween.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/resource/default.thm.json" afterPath="$PROJECT_DIR$/client-egret/resource/default.thm.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.js" afterPath="$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.ts" afterPath="$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/mixApp/Config.ts" afterPath="$PROJECT_DIR$/client-egret/src/mixApp/Config.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/Main.js" afterPath="$PROJECT_DIR$/client-egret/src/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/Main.ts" afterPath="$PROJECT_DIR$/client-egret/src/Main.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/app/TestMain.js" afterPath="$PROJECT_DIR$/client-egret/src/app/TestMain.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/app/TestMain.ts" afterPath="$PROJECT_DIR$/client-egret/src/app/TestMain.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/src/mixApp/AppMain.ts" afterPath="$PROJECT_DIR$/client-egret/src/mixApp/AppMain.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client-egret/template/runtime/native_require.js" afterPath="$PROJECT_DIR$/client-egret/template/runtime/native_require.js" />
     </list>
     <ignored path="egret-wx-webapp.iws" />
@@ -62,41 +67,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="leanCloud.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.d.ts">
+      <file leaf-file-name="TestMain.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/client-egret/src/app/TestMain.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppLogin.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54888505">
-              <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppLogin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="79" column="52" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client-egret/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.344828">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.116959065">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -148,23 +123,26 @@
         <option value="$PROJECT_DIR$/server-node/cloud/mix.ts" />
         <option value="$PROJECT_DIR$/server-node/cloud/jssign.ts" />
         <option value="$PROJECT_DIR$/server-node/cloud/weixin.ts" />
-        <option value="$PROJECT_DIR$/client-egret/src/app/TestMain.ts" />
         <option value="$PROJECT_DIR$/client-egret/libs/modules/eui/eui.d.ts" />
         <option value="$PROJECT_DIR$/client-egret/libs/modules/egret/egret.d.ts" />
         <option value="$PROJECT_DIR$/client-egret/src/app/empty/SlideGroup.ts" />
         <option value="$PROJECT_DIR$/client-egret/resource/mix_eui/empty/SlideGroupSkin.exml" />
         <option value="$PROJECT_DIR$/client-egret/src/mixApp/empty/SlideGroup.ts" />
         <option value="$PROJECT_DIR$/client-egret/src/mixApp/WebApp.ts" />
-        <option value="$PROJECT_DIR$/client-egret/src/Main.ts" />
-        <option value="$PROJECT_DIR$/client-egret/src/mixApp/AppMain.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/client-egret/README.md" />
         <option value="$PROJECT_DIR$/client-egret/egretProperties.json" />
         <option value="$PROJECT_DIR$/client-egret/src/mixApp/Config.ts" />
         <option value="$PROJECT_DIR$/../egret-modules-list/leanCloud/libsrc/src/av.d.ts" />
-        <option value="$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.ts" />
         <option value="$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.d.ts" />
+        <option value="$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.ts" />
         <option value="$PROJECT_DIR$/client-egret/index.html" />
+        <option value="$PROJECT_DIR$/client-egret/src/mixApp/AppMain.ts" />
+        <option value="$PROJECT_DIR$/client-egret/src/Main.ts" />
+        <option value="$PROJECT_DIR$/client-egret/jdmedia.html" />
+        <option value="$PROJECT_DIR$/client-egret/webview.html" />
+        <option value="$PROJECT_DIR$/client-egret/src/mixApp/empty/WebView.ts" />
+        <option value="$PROJECT_DIR$/client-egret/src/app/TestMain.ts" />
       </list>
     </option>
   </component>
@@ -174,10 +152,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="282" />
+    <option name="y" value="112" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="845" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -298,8 +276,30 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AppLogin.ts" />
-              <option name="myItemType" value="com.intellij.lang.typescript.compiler.ui.projectView.TypeScriptNestingTreeNode" />
+              <option name="myItemId" value="empty" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="egret-wx-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="egret-wx-webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client-egret" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -312,23 +312,23 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="js-jscs-nodeInterpreter" value="D:\Program Files\nodejs\node.exe" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.TypeScript" />
     <property name="settings.editor.splitter.proportion" value="0.22918707" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../egret-modules-list/leanCloud/libsrc/src/av.d.ts" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\HiCat\MixGame\egret-wx-webapp\client-egret" />
+      <recent name="D:\HiCat\MixGame\egret-wx-webapp\server-node\cloud" />
+      <recent name="D:\HiCat\MixGame\egret-wx-webapp\server-node" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\HiCat\MixGame\egret-wx-webapp\client-egret\resource\mix_eui" />
       <recent name="D:\HiCat\MixGame\egret-wx-webapp\client-egret\src\mixApp" />
       <recent name="D:\HiCat\MixGame\egret-wx-webapp\server-node\cloud" />
       <recent name="D:\HiCat\MixGame\egret-wx-webapp\server-node" />
       <recent name="D:\HiCat\MixGame\egret-wx-webapp\server-nodejs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\HiCat\MixGame\egret-wx-webapp\client-egret" />
-      <recent name="D:\HiCat\MixGame\egret-wx-webapp\server-node\cloud" />
-      <recent name="D:\HiCat\MixGame\egret-wx-webapp\server-node" />
     </key>
   </component>
   <component name="RunManager">
@@ -395,17 +395,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="282" y="112" width="1382" height="845" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21406959" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1860817" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20261438" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2009804" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4232026" sideWeight="0.5089286" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33585477" sideWeight="0.49107143" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26172465" sideWeight="0.49107143" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -431,7 +431,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -530,13 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/egretApp/module/leanCloud/libsrc/src/av.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24013722">
-          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -652,20 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/libs/modules/egret/egret.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="65.42024">
-          <caret line="1907" column="10" selection-start-line="1907" selection-start-column="10" selection-end-line="1907" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/src/app/TestMain.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27444252">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/empty/SlideGroup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27444252">
@@ -680,31 +661,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/bin-debug/mixApp/AppMain.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/empty/SlideGroup.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client-egret/src/ThemeAdapter.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/src/Main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65694684">
-          <caret line="140" column="55" selection-start-line="140" selection-start-column="55" selection-end-line="140" selection-end-column="55" />
         </state>
       </provider>
     </entry>
@@ -714,23 +674,11 @@
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/AppMain.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6861063">
-          <caret line="20" column="57" selection-start-line="20" selection-start-column="57" selection-end-line="20" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.149228">
           <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -738,7 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5433213">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -746,34 +693,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6912522">
           <caret line="50" column="41" selection-start-line="50" selection-start-column="41" selection-end-line="50" selection-end-column="41" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4575045">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-egret/libs/modules/leanCloud/leanCloud.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client-egret/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.344828">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,14 +707,91 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="79" column="52" selection-start-line="79" selection-start-column="43" selection-end-line="79" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4692082">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/src/Main.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="131" column="42" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/AppMain.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/libs/modules/egret/egret.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3328841">
+          <caret line="10385" column="15" selection-start-line="10385" selection-start-column="15" selection-end-line="10385" selection-end-column="15" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/webview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50490886">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6946565">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/empty/WebView.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.625731">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/jdmedia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38931298">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/AppLogin.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54888505">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.029239766">
+          <caret line="102" column="59" selection-start-line="102" selection-start-column="59" selection-end-line="102" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/src/mixApp/empty/SlideGroup.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20467836">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client-egret/src/app/TestMain.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.116959065">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -7,6 +7,7 @@ var MixApp;
     var AppMain = (function () {
         function AppMain() {
         }
+        var d = __define,c=AppMain,p=c.prototype;
         AppMain.initLogin = function () {
             AppMain.Main.removeChildren();
             AppMain.Main.touchEnabled = false;
@@ -50,4 +51,5 @@ var MixApp;
         return AppMain;
     })();
     MixApp.AppMain = AppMain;
+    egret.registerClass(AppMain,'MixApp.AppMain');
 })(MixApp || (MixApp = {}));

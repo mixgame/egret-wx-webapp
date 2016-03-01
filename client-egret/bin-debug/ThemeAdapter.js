@@ -29,6 +29,7 @@
 var ThemeAdapter = (function () {
     function ThemeAdapter() {
     }
+    var d = __define,c=ThemeAdapter,p=c.prototype;
     /**
      * 解析主题
      * @param url 待解析的主题url
@@ -36,7 +37,7 @@ var ThemeAdapter = (function () {
      * @param errorFunc 解析失败回调函数，示例：errorFunc():void;
      * @param thisObject 回调的this引用
      */
-    ThemeAdapter.prototype.getTheme = function (url, compFunc, errorFunc, thisObject) {
+    p.getTheme = function (url, compFunc, errorFunc, thisObject) {
         function onGetRes(e) {
             compFunc.call(thisObject, e);
         }
@@ -51,3 +52,4 @@ var ThemeAdapter = (function () {
     };
     return ThemeAdapter;
 })();
+egret.registerClass(ThemeAdapter,'ThemeAdapter',["eui.IThemeAdapter"]);

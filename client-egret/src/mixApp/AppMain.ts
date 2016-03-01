@@ -4,6 +4,7 @@ module MixApp {
      * 界面直接的切换和显示都统一调用此类
      */ 
     export class AppMain {
+        static Stage:egret.Stage;   //舞台
         static Main:Main;           //总ui层
         static Home:HomeMain;       //app主要显示层
         static Pay:PayMain;         //支付界面 覆盖在home上面

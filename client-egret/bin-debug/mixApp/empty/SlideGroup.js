@@ -1,8 +1,3 @@
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
 var MixEmpty;
 (function (MixEmpty) {
     /*
@@ -27,16 +22,17 @@ var MixEmpty;
             this.showScroller.addEventListener(eui.UIEvent.CHANGE, this.onTouchMoveing, this);
             this.showScroller.addEventListener(eui.UIEvent.CHANGE_END, this.onTouchMoveEnd, this);
         }
-        SlideGroup.prototype.addEui = function (oneEui) {
+        var d = __define,c=SlideGroup,p=c.prototype;
+        p.addEui = function (oneEui) {
             console.log("添加eui");
             oneEui.width = this.width;
             oneEui.height = this.height;
             this.showGroup.addChild(oneEui);
         };
-        SlideGroup.prototype.removeEui = function () {
+        p.removeEui = function () {
             this.showScroller.removeChildren();
         };
-        SlideGroup.prototype.onTOuchMoveStart = function (event) {
+        p.onTOuchMoveStart = function (event) {
             var scroll = event.target;
             if (this.MoveType === MixEmpty.SlideGroup.MOVETYPE_HOR) {
                 this.posStart = scroll.viewport.scrollH;
@@ -45,11 +41,11 @@ var MixEmpty;
                 this.posStart = scroll.viewport.scrollV;
             }
         };
-        SlideGroup.prototype.onTouchMoveing = function (event) {
+        p.onTouchMoveing = function (event) {
             var scroll = event.target;
             this.isMove = true;
         };
-        SlideGroup.prototype.onTouchMoveEnd = function (event) {
+        p.onTouchMoveEnd = function (event) {
             if (!this.isMove) {
                 return;
             }
@@ -80,4 +76,5 @@ var MixEmpty;
         return SlideGroup;
     })(eui.Scroller);
     MixEmpty.SlideGroup = SlideGroup;
+    egret.registerClass(SlideGroup,'MixEmpty.SlideGroup');
 })(MixEmpty || (MixEmpty = {}));
