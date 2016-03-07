@@ -6,7 +6,7 @@
  * 暂未考虑屏幕大小改变、屏幕旋转以及单页面多Webplay实例的情形
  * Created by yxiao on 2015/9/30.
  */
-module MixApp {
+module MixEmpty {
 
     export class WebView extends egret.DisplayObjectContainer {
 

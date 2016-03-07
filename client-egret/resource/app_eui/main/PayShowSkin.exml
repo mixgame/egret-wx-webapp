@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<e:Skin class="skins.PayShowSkin" xmlns:e="http://ns.egret.com/eui" width="480" height="800">
+<e:Skin class="PayShowSkin" xmlns:e="http://ns.egret.com/eui" width="480" height="800">
     <e:Rect width="100%" height="100%" fillColor="0x090909" />
     <e:Button id="payBtn" bottom="10" horizontalCenter="0" width="420" height="48" label="微信付款" />
 </e:Skin>

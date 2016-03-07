@@ -1,26 +1,12 @@
-declare module skins{
-	class HomeMainSkin extends eui.Skin{
-	}
+declare class HomeMainSkin extends eui.Skin{
 }
-declare module skins{
-	class NoticeMainSkin extends eui.Skin{
-	}
+declare class NoticeMainSkin extends eui.Skin{
 }
-declare module skins{
-	class PayShowSkin extends eui.Skin{
-	}
+declare class PayShowSkin extends eui.Skin{
 }
-declare module skins{
-	class UserMainSkin extends eui.Skin{
-	}
+declare class UserMainSkin extends eui.Skin{
 }
-declare module skin{
-	class UserSmallSkin extends eui.Skin{
-	}
-}
-declare module skins{
-	class VoucherSingleSkin extends eui.Skin{
-	}
+declare class AdminLoginSkin extends eui.Skin{
 }
 declare module skins{
 	class ButtonSkin extends eui.Skin{

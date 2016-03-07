@@ -85,10 +85,6 @@ module MixApp {
                 channel:"weixin"
             });
 
-            MixApp.AvConfig.analytics.send({event:'test-1',attr:{a1:'a1',b2:'b2'},duration:3000},(result)=>{
-                console.log(result);
-            });
-
             //是否开启微信js
             if(!MixApp.WebAppConfig.isOpenJsSdk){
                 console.info("关闭了微信jssdk初始化");

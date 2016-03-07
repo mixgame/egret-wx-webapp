@@ -1,8 +1,7 @@
 {
   "autoGenerateExmlsList": true,
   "exmls": [
-    "resource/app_eui/voucher/VoucherSingleSkin.exml",
-    "resource/app_eui/user/UserSmallSkin.exml",
+    "resource/app_eui/voucher/AdminLoginSkin.exml",
     "resource/app_eui/main/HomeMainSkin.exml",
     "resource/app_eui/main/NoticeMainSkin.exml",
     "resource/app_eui/main/PayShowSkin.exml",
