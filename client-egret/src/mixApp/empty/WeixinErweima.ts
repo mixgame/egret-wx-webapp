@@ -1,15 +1,5 @@
-/**
- * 原作者：  xiaoyang611
- * Git:     http://git.oschina.net/xycode/codes/wfqdu3pbmxz97hrvy18es
- * WebView
- * 适配FIXED_WIDTH、FIXED_HEIGHT、NO_BORDER、SHOW_ALL四种缩放模式
- * 暂未考虑屏幕大小改变、屏幕旋转以及单页面多Webplay实例的情形
- * Created by yxiao on 2015/9/30.
- */
 module MixEmpty {
-
-    export class WebView extends egret.DisplayObjectContainer {
-
+    export class WeixinErweima {
         private _x:number = 0;
         private _y:number = 0;
         private _width:number = 0;
@@ -28,18 +18,9 @@ module MixEmpty {
         private _designW:number;
 
         private _iframeWrapper:HTMLDivElement = null;
-        private _iframe:HTMLIFrameElement = null;
+        private _img:HTMLIFrameElement = null;
 
-        /**
-         * @param src
-         */
-        public constructor(src?:string) {
-            super();
-
-            if(!src){
-                src = "";
-            }
-
+        public constructor(){
             this._scaleMode = MixApp.AppMain.Stage.scaleMode;
 
             var stageDelegateDom:HTMLElement = document.getElementById("StageDelegateDiv");
@@ -56,28 +37,23 @@ module MixEmpty {
             }
             this._iframeWrapper = <HTMLDivElement>iframeWrapperDom;
             this._iframeWrapper.style.display = "inline";
-            //this._iframeWrapper.style.opacity = "0";
 
-            var iframe = document.createElement("iframe"), t = new Date().getTime();
-            iframe.src = src;
-            iframe.id = "webview-iframe-" + t;
-            iframe.name = "webview-iframe-" + t;
-            iframe.scrolling = "no";
+
+            var iframe = document.createElement("img"), t = new Date().getTime();
+            iframe.id = "webview-img-" + t;
+            iframe.name = "webview-img-" + t;
+//            iframe.scrolling = "no";
             iframe.style.position = "absolute";
             iframe.style.top = "0";
             iframe.style.left = "0";
             //iframe.style.opacity = "0";
             iframe.style.display = 'inline';
             iframe.style.visibility = 'hidden';
-            iframe.frameBorder = '0';
+//            iframe.frameBorder = '0';
             iframe.border = "0";
             this._iframeWrapper.appendChild(iframe);
 
-            this._iframe = <HTMLIFrameElement>document.getElementById("webview-iframe-" + t);
-            var self = this;
-            this._iframe.onload = function () {
-
-            };
+            this._img = <HTMLIFrameElement>document.getElementById("webview-img-" + t);
 
             this._stageW = MixApp.AppMain.Stage.stageWidth;
             this._stageH = MixApp.AppMain.Stage.stageHeight;
@@ -101,19 +77,19 @@ module MixEmpty {
 
         public show():void {
             if(this.isDestroy){
-                this._iframeWrapper.appendChild(this._iframe);
+                this._iframeWrapper.appendChild(this._img);
             }
 
-            this._iframe.style.visibility = 'visible';
+            this._img.style.visibility = 'visible';
             this._iframeWrapper.style.visibility = 'visible';
         }
 
         private isDestroy:boolean;
         public destroy():void {
-            if (this._iframe) {
-                this._iframe.style.visibility = 'hidden';
+            if (this._img) {
+                this._img.style.visibility = 'hidden';
                 this._iframeWrapper.style.visibility = "hidden";
-                this._iframeWrapper.removeChild(this._iframe);
+                this._iframeWrapper.removeChild(this._img);
                 this.isDestroy = true;
             }
         }
@@ -128,7 +104,7 @@ module MixEmpty {
             var wid:number = Math.floor(pro*this._displayW);
 
             this._iframeWrapper.style.width = wid + "px";
-            this._iframe.width = wid + "px";
+            this._img.style.width = wid + "px";
         }
 
         public get height():number {
@@ -138,9 +114,9 @@ module MixEmpty {
         public set height(value:number) {
             this._height = value;
             var pro:number = value/this._stageH;
-            var wid:number = pro*this._displayH;
-            this._iframeWrapper.style.height = wid + "px";
-            this._iframe.height = wid + "px";
+            var height:number = pro*this._displayH;
+            this._iframeWrapper.style.height = height + "px";
+            this._img.style.height = height + "px";
         }
 
         public set x(value:number) {
@@ -185,7 +161,7 @@ module MixEmpty {
 
         public set src(value:string) {
             this._src = value;
-            this._iframe.src = this._src;
+            this._img.src = this._src;
         }
     }
 }
